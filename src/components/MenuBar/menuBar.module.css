@@ -9,10 +9,11 @@
     display: flex;
     justify-content: flex-start;
     width: 100%;
-    background-color: #ADB5BD;
+    background-color: #72b01d;
 }
 
 .socialNetworks{
+    color: #0d0a0b;
     width: 90%;
     display: flex;
     justify-content: flex-end;

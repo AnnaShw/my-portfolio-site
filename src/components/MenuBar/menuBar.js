@@ -2,6 +2,8 @@ import React from 'react';
 import classes from './menuBar.module.css';
 import { Container, Navbar } from 'react-bootstrap';
 
+
+
 function menuBar() {
     return (
       <Navbar bg="light" expand="lg" fixed='top'>
