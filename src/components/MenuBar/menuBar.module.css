@@ -1,24 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
-.name{
-    font-size: 30px;
-    font-family:oswald;
-    padding-left: 40px;
-}
-
-.allMenuBar{
-    display: flex;
-    justify-content: flex-start;
-    width: 100%;
-    background-color: #72b01d;
-}
-
-.socialNetworks{
-    color: #0d0a0b;
-    width: 90%;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.name:hover{
-    color: #F8F9FA;
+.toolB{
+    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
 }

@@ -1,28 +1,47 @@
-.intro{
-    margin-top: 100px;
-    width: 90%;
-    background-color: rgba(114, 176, 29, 0.35);
+.all {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap:24px;
+  margin: 100px auto;
 }
 
-.intro div{
-    color: #0d0a0b;
-    font-size: 20px;
+.exp {
+    width: 100%;
+    color:white;
 }
 
-.intro h1{
+.bottomCard{
     text-align: center;
+    color:white;
+}
+ .all h1{
+    text-align: center;
+    color:white;
+ }
+ .all ul{
+  color:white;
+}
+.all li{
+  color:white;
 }
 
-.exp{
-    margin-top: 20px;
-    width: 90%;
-    text-align: center;
-    font-size: 20px;
-    flex-direction: column;
-    background-color: rgba(114, 176, 29, 0.35);
+p{
+  color:white;
 }
-.all{
-    margin-left: 150px;
-    display: flex;
-    flex-direction: column;
+
+.photos h1{
+  color:white;
+}
+
+.workH{
+  margin-top: 50px;
+  text-align:start;
+  color:white;
+}
+
+.workTimeLine{
+  color:white;
 }

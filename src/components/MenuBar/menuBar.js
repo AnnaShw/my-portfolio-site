@@ -1,23 +1,61 @@
-import React from 'react';
-import classes from './menuBar.module.css';
-import { Container, Navbar } from 'react-bootstrap';
+import React from "react";
+import {
+  AppBar,
+  Toolbar,
+  CssBaseline,
+  Typography,
+  makeStyles,
+} from "@material-ui/core";
+import { Link } from "react-router-dom";
+import BackgroundLetterAvatars from "../../components/Avatar";
+const useStyles = makeStyles((theme) => ({
+  root: {
+    backgroundColor: "transparent",
+  },
+  navlinks: {
+    marginLeft: theme.spacing(10),
+    display: "flex",
+  },
+  logo: {
+    flexGrow: "1",
+    cursor: "pointer",
+  },
+  link: {
+    textDecoration: "none",
+    color: "white",
+    fontSize: "20px",
+    marginLeft: theme.spacing(20),
+    "&:hover": {
+      color: "yellow",
+      borderBottom: "1px solid white",
+    },
+  },
+}));
 
+function MenuBar() {
+  const classes = useStyles();
 
-
-function menuBar() {
-    return (
-      <Navbar bg="light" expand="lg" fixed='top'>
-        <Container>
-          <div className={classes.allMenuBar}>
-            <Navbar.Brand className={classes.name}>AS</Navbar.Brand>
-            <div className={classes.socialNetworks}>
-              <Navbar.Brand href='https://www.linkedin.com/in/anna-shveynfurt/' className={classes.name}>LinkedIn</Navbar.Brand>
-              <Navbar.Brand href='https://github.com/AnnaShw' className={classes.name}>GitHub</Navbar.Brand>
-            </div>
-          </div>
-        </Container>
-      </Navbar>
-    );
-    }
-
-    export default menuBar;
+  return (
+    <AppBar position="static" className={classes.root}>
+      <CssBaseline />
+      <Toolbar>
+        <BackgroundLetterAvatars />
+        <Typography variant="h4" className={classes.logo}>
+          Anna Shveynfurt
+        </Typography>
+        <div className={classes.navlinks}>
+          <Link to="/" className={classes.link}>
+            Home
+          </Link>
+          <Link to="/about" className={classes.link}>
+            About Me
+          </Link>
+          <Link to="/workHistory" className={classes.link}>
+            Work
+          </Link>
+        </div>
+      </Toolbar>
+    </AppBar>
+  );
+}
+export default MenuBar;
