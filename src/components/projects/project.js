@@ -43,7 +43,7 @@ function Projects() {
           </Grid>
           <Button href={oneProject[0].url}><LinkIcon /> Visit game site
           </Button>
-          <Divider variant="middle" />
+          <Divider variant='subtitle1' />
           <div className={classes.description}>
             <Typography gu tterBottom variant="body1">
               {oneProject[0].description}

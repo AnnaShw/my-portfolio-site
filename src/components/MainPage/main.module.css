@@ -20,28 +20,45 @@
  .all h1{
     text-align: center;
     color:white;
+    font-size: 40px;
+
  }
  .all ul{
   color:white;
+  font-size: 20px;
 }
 .all li{
   color:white;
+  font-size: 20px;
 }
 
 p{
   color:white;
+  font-size: 20px;
 }
 
 .photos h1{
   color:white;
+  font-size: 40px;
 }
 
 .workH{
   margin-top: 50px;
   text-align:start;
   color:white;
+  font-size: 20px;
 }
 
 .workTimeLine{
   color:white;
 }
+
+.toWork{
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  gap:24px;
+  font-size: 20px;
+  margin: 80px auto;
+}
+

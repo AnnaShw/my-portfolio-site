@@ -7,17 +7,8 @@ import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import db from "../firebase/firebase";
-import classes from '../components/MainPage/main.module.css';
+import classes from "../components/MainPage/main.module.css";
 
-/*
-<Card>
-        <div className={classes.bottomCard}>
-          {exper.map((listitem) => (
-            <p>{listitem}</p>
-          ))}
-        </div>
-      </Card>
-*/
 export default function TimeLineComponent() {
   const [exper, setExp] = useState([]);
   useEffect(() => {
@@ -36,7 +27,8 @@ export default function TimeLineComponent() {
             <TimelineDot />
             <TimelineConnector />
           </TimelineSeparator>
-          <TimelineContent>{event}</TimelineContent>
+            {" "}
+            <TimelineContent >{event}</TimelineContent>{" "}
         </TimelineItem>
       ))}
     </Timeline>

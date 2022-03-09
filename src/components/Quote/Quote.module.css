@@ -1,0 +1,42 @@
+.animatedShadowQuote {
+  display: inline-block;
+  margin: 1em;
+  max-width: 20em;
+  position: relative;
+  background-image: linear-gradient(
+    to top,
+    #fcc5e4 0%,
+    #fda34b 15%,
+    #ff7882 35%,
+    #c8699e 52%,
+    #7046aa 71%,
+    #0c1db8 87%,
+    #020f75 100%
+  );
+}
+.animatedShadowQuote blockquote {
+  animation: shadows 2s linear infinite alternate;
+  display: inline-block;
+  margin: 0;
+  padding: 1em;
+}
+
+.animatedShadowQuote cite {
+  display: block;
+  text-align: right;
+  color: white;
+}
+.animatedShadowQuote cite:before {
+  content: "- ";
+}
+
+@keyframes shadows {
+  0% {
+    box-shadow: 0 2px 4px -2px rgba(0, 0, 0, 0.25);
+    transform: scale(0.95);
+  }
+  100% {
+    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.25);
+    transform: scale(1);
+  }
+}
