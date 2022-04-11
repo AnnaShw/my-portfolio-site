@@ -1,10 +1,10 @@
-import * as React from 'react';
-import Avatar from '@mui/material/Avatar';
-import Stack from '@mui/material/Stack';
+import * as React from "react";
+import Avatar from "@mui/material/Avatar";
+import Stack from "@mui/material/Stack";
 
 function stringToColor(string) {
   let hash = 0;
-  let color = '#';
+  let color = "#";
   let i;
 
   for (i = 0; i < string.length; i += 1) {
@@ -23,14 +23,14 @@ function stringAvatar(name) {
     sx: {
       bgcolor: stringToColor(name),
     },
-    children: `${name.split(' ')[0][0]}${name.split(' ')[1][0]}`,
+    children: `${name.split(" ")[0][0]}${name.split(" ")[1][0]}`,
   };
 }
 
-export default function BackgroundLetterAvatars() {
+export default function BackgroundLetterAvatars(props) {
   return (
     <Stack direction="row" spacing={2}>
-      <Avatar {...stringAvatar('Anna Shveynfurt')} />
+      <Avatar {...stringAvatar(props.currentStr)} />
     </Stack>
   );
 }

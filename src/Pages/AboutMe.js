@@ -5,6 +5,7 @@ import db from "../firebase/firebase";
 import ImageListComponent from "../components/ImageList/ImgList";
 import Typography from "@mui/material/Typography";
 import MoonLoader from "react-spinners/ClipLoader";
+import Text from "../components/Text/Text";
 
 const style = {
   position: "fixed",
@@ -40,16 +41,18 @@ export default function AboutMe() {
       ) : (
         <div>
           <Card>
-            <h1>{header}</h1>
+            <Text>{header}</Text>
             <ul>{ul}</ul>
           </Card>
           <Card className={classes.photos}>
-            <h1>Photo Gallery</h1>
-            <div className={classes.Type}><Typography align="center" >
-              I do believe that actions images speak louder than words. By
-              looking at the pictures below, you can get a little grasp of what
-              person I am outside of work.
-            </Typography></div>
+            <Text>Photo Gallery</Text>
+            <div className={classes.Type}>
+              <Typography align="center">
+                I do believe that actions images speak louder than words. By
+                looking at the pictures below, you can get a little grasp of
+                what person I am outside of work.
+              </Typography>
+            </div>
             <ImageListComponent />
           </Card>
         </div>

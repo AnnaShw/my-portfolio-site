@@ -40,11 +40,16 @@ p{
 .photos h1{
   color:white;
   font-size: 40px;
+  text-align: center;
+}
+
+.photos h1{
+  color:white;
+  font-size: 20px;
 }
 
 .workH{
   margin-top: 50px;
-  text-align:start;
   color:white;
   font-size: 20px;
 }
@@ -60,5 +65,13 @@ p{
   gap:24px;
   font-size: 20px;
   margin: 80px auto;
+}
+
+.forButton{
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin-left: 100px;
+  justify-content: space-between;
 }
 

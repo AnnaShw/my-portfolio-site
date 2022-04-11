@@ -1,30 +1,30 @@
 .animatedShadowQuote {
-  display: inline-block;
-  margin: 1em;
-  max-width: 20em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  background-image: linear-gradient(
-    to top,
-    #fcc5e4 0%,
-    #fda34b 15%,
-    #ff7882 35%,
-    #c8699e 52%,
-    #7046aa 71%,
-    #0c1db8 87%,
-    #020f75 100%
-  );
+  text-align: center;
 }
+.animatedShadowQuote img {
+  width: 55%;
+}
+
 .animatedShadowQuote blockquote {
   animation: shadows 2s linear infinite alternate;
-  display: inline-block;
   margin: 0;
+  width: 350px;
   padding: 1em;
+  position: absolute;
+}
+
+blockquote p {
+  color: white;
 }
 
 .animatedShadowQuote cite {
   display: block;
   text-align: right;
-  color: white;
+  color: black;
 }
 .animatedShadowQuote cite:before {
   content: "- ";

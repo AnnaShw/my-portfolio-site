@@ -1,4 +1,3 @@
-import classes from "./pr.module.css";
 import React, { useState, useEffect } from "react";
 import db from "../../firebase/firebase";
 import LinkIcon from "@mui/icons-material/Link";
@@ -7,6 +6,7 @@ import Grid from "@mui/material/Grid";
 import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 import { Button } from "@mui/material";
+import classes from "./pr.module.css";
 
 function Projects() {
   const [projects, setPr] = useState([]);
@@ -23,8 +23,7 @@ function Projects() {
     let t = data.data().data;
     let pr = {
       name: t[0],
-      description: t[1],
-      url: t[2],
+      url: t[1],
     };
     return pr;
   };
@@ -32,23 +31,22 @@ function Projects() {
   return (
     <div className={classes.divC}>
       {projects.map((oneProject) => (
-        <Box className={classes.fortext} sx={{ my: 3, mx: 2 }}>
+        <Box
+          className={classes.fortext}
+          sx={{ my: 3, mx: 2 }}
+          key={Math.random()}
+        >
           <Grid container alignItems="center">
             <Grid item xs>
-              <Typography gutterBottom variant="h4" component="div">
+              <Typography variant="h4" component="div">
                 {" "}
                 {oneProject[0].name}
               </Typography>
             </Grid>
           </Grid>
-          <Button href={oneProject[0].url}><LinkIcon /> Visit game site
+          <Button href={oneProject[0].url}>
+            <LinkIcon /> Visit game site
           </Button>
-          <Divider variant='subtitle1' />
-          <div className={classes.description}>
-            <Typography gu tterBottom variant="body1">
-              {oneProject[0].description}
-            </Typography>
-          </div>
         </Box>
       ))}
     </div>

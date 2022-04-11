@@ -39,7 +39,7 @@ function MenuBar() {
     <AppBar position="static" className={classes.root}>
       <CssBaseline />
       <Toolbar>
-        <BackgroundLetterAvatars />
+        <BackgroundLetterAvatars currentStr={"Anna Shveynfurt"} />
         <Typography variant="h4" className={classes.logo}>
           Anna Shveynfurt
         </Typography>

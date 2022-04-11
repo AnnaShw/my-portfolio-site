@@ -2,7 +2,8 @@ import TypingDemo from "../TypingDemo/TypingDemo";
 import Quote from "../Quote/Quote";
 import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core";
-import clas from "./main.module.css";
+import MyButton from "../../components/MyButton/MyButton";
+import classnames from "./main.module.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -26,22 +27,25 @@ function Main() {
   return (
     <div>
       <TypingDemo />
-      <div className={clas.toWork}>
+      <div className={classnames.toWork}>
         <div>
           <p>
             Here you can find out more about the companies I've collaborated
             with, my projects and the technologies I can work with.
           </p>
-          <Link to="/workHistory" className={classes.link}>
+          <MyButton href={"/workHistory"} out={false}>
             Check out my work history
-          </Link>
+          </MyButton>
         </div>
-        <div><p>I belive that:</p><Quote/></div>
+        <div>
+          <p>I belive that:</p>
+          <Quote />
+        </div>
         <div>
           <p>Here you can find out more about me & my hobbies.</p>
-          <Link to="/about" className={classes.link}>
+          <MyButton href={"/about"} out={false}>
             Get to know me
-          </Link>
+          </MyButton>
         </div>
       </div>
     </div>

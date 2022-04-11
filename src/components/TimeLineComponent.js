@@ -22,7 +22,7 @@ export default function TimeLineComponent() {
   return (
     <Timeline position="alternate" className={classes.workTimeLine}>
       {exper.map((event) => (
-        <TimelineItem>
+        <TimelineItem key={Math.random()}>
           <TimelineSeparator>
             <TimelineDot />
             <TimelineConnector />

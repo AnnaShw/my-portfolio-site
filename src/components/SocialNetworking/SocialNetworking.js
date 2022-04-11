@@ -8,8 +8,8 @@ export default function SocialNetworking() {
 
   return (
     <BottomNavigation sx={{ width: "all" }}>
-      <Button href="https://www.linkedin.com/in/anna-shveynfurt/">
-        <LinkedInIcon />
+      <Button>
+        <a href="https://www.linkedin.com/in/anna-shveynfurt/"><LinkedInIcon /></a>
       </Button>
       <Button href="https://github.com/AnnaShw?tab=repositories">
         <GitHubIcon />
