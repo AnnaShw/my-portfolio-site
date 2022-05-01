@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
   logo: {
     flexGrow: "1",
     cursor: "pointer",
+    marginLeft: theme.spacing(2),
   },
   link: {
     textDecoration: "none",

@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import db from "../../firebase/firebase";
 import LinkIcon from "@mui/icons-material/Link";
-import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
-import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 import { Button } from "@mui/material";
+import Carousel from "react-elastic-carousel";
 import classes from "./pr.module.css";
+
+/*
+ */
 
 function Projects() {
   const [projects, setPr] = useState([]);
@@ -29,44 +30,28 @@ function Projects() {
   };
 
   return (
-    <div className={classes.divC}>
+    <Carousel itemsToShow={2}>
       {projects.map((oneProject) => (
-        <Box
-          className={classes.fortext}
-          sx={{ my: 3, mx: 2 }}
-          key={Math.random()}
-        >
-          <Grid container alignItems="center">
-            <Grid item xs>
-              <Typography variant="h4" component="div">
-                {" "}
-                {oneProject[0].name}
-              </Typography>
-            </Grid>
-          </Grid>
+        <div className={classes.divC}>
+          <Typography
+            variant="h4"
+            component="div"
+            sx={{ m: 2.1 }}
+            className={classes.name}
+          >
+            {" "}
+            {oneProject[0].name}
+          </Typography>
           <Button href={oneProject[0].url}>
-            <LinkIcon /> Visit game site
+            <Typography className={classes.visit} variant="h6">
+              <LinkIcon />
+              {" Visit game site"}
+            </Typography>
           </Button>
-        </Box>
+        </div>
       ))}
-    </div>
+    </Carousel>
   );
 }
 
 export default Projects;
-/*
-{projects.map((oneProject) => (
-        
-          <Box sx={{ my: 3, mx: 2 }}>
-            <Grid container alignItems="center">
-              <Grid item xs>
-                <Typography gutterBottom variant="h4" component="div">{oneProject[0]}</Typography>
-              </Grid>
-            </Grid>
-            <Typography color="text.secondary" variant="body2">{oneProject[2]}</Typography>
-          </Box>
-          <Divider variant="middle" />
-          <Typography gu tterBottom variant="body1">{oneProject[1]}</Typography>
-        </Box>
-      ))}
-*/

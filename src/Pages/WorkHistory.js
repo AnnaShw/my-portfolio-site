@@ -4,11 +4,11 @@ import Card from "../components/Card/Card";
 import Projects from "../components/projects/project";
 import TimeLineComponent from "../components/TimeLineComponent";
 import MoonLoader from "react-spinners/ClipLoader";
-import MyButton from '../components/MyButton/MyButton';
+import MyButton from "../components/MyButton/MyButton";
 import Text from "../components/Text/Text";
+import Typography from "@mui/material/Typography";
+import Carousel from "react-elastic-carousel";
 import classes from "../components/MainPage/main.module.css";
-
-
 
 const style = {
   position: "fixed",
@@ -30,8 +30,7 @@ export default function WorkHistory() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    let tempi=[];
-    db.collection("Me").onSnapshot( (snapshot) => {
+    db.collection("Me").onSnapshot((snapshot) => {
       let docs = snapshot.docs;
       let temp = docs.map((doc) => ({
         profUls: doc.data().profUl,
@@ -42,19 +41,19 @@ export default function WorkHistory() {
       setLoading(false);
     });
 
-    db.collection("StudyOrgs").onSnapshot( (snapshot) => {
+    db.collection("StudyOrgs").onSnapshot((snapshot) => {
       let docs = snapshot.docs;
       let temp1 = docs.map((doc) => [helpFunc(doc)]);
       setStudyOrgs(...studyOrgs, temp1);
     });
     setStudyOrgs(studyOrgs);
-  },[]);
+  }, []);
 
   const helpFunc = (data) => {
     let t = data.data();
     let oranization = {
       name: t.name,
-      url: t.url
+      url: t.url,
     };
     return oranization;
   };
@@ -72,24 +71,35 @@ export default function WorkHistory() {
         </div>
       ) : (
         <div>
-          <Card>
-            <ul className={classes.workH}>
-              {profUl}
-              {li.map((item) => (
-                <li key={Math.random()}>{item}</li>
-              ))}
-            </ul>
-          </Card>
+          <p className={classes.workH}>{profUl}</p>
+          <Carousel itemsToShow={3}>
+            {li.map((item) => (
+              <Typography
+                className={classes.item}
+                variant="h5"
+                component="div"
+                key={Math.random()}
+              >
+                {" "}
+                {item}
+              </Typography>
+            ))}
+          </Carousel>
+
           <Card className={classes.photos}>
             <div style={styleH1}>
-              <Text>My adventures in Cyber Security world</Text>
+              {" "}
               <p>
                 I try to get my knowledge from every source available to me,
                 here are some of them:
               </p>
               <div className={classes.forButton}>
                 {studyOrgs.map((current) => (
-                  <MyButton href={current[0].url}  out={true} key={Math.random()}>
+                  <MyButton
+                    href={current[0].url}
+                    out={true}
+                    key={Math.random()}
+                  >
                     {current[0].name}
                   </MyButton>
                 ))}

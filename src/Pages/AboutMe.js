@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import classes from "../components/MainPage/main.module.css";
 import Card from "../components/Card/Card";
 import db from "../firebase/firebase";
 import ImageListComponent from "../components/ImageList/ImgList";
 import Typography from "@mui/material/Typography";
 import MoonLoader from "react-spinners/ClipLoader";
 import Text from "../components/Text/Text";
+import classes from "../components/MainPage/main.module.css";
 
 const style = {
   position: "fixed",
@@ -42,12 +42,12 @@ export default function AboutMe() {
         <div>
           <Card>
             <Text>{header}</Text>
-            <ul>{ul}</ul>
+            <p className={classes.item}>{ul}</p>
           </Card>
           <Card className={classes.photos}>
             <Text>Photo Gallery</Text>
-            <div className={classes.Type}>
-              <Typography align="center">
+            <div className={classes.workTimeLine}>
+              <Typography align="center" variant="h5">
                 I do believe that actions images speak louder than words. By
                 looking at the pictures below, you can get a little grasp of
                 what person I am outside of work.

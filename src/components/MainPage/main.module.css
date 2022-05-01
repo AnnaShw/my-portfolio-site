@@ -4,70 +4,69 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  gap:24px;
+  gap: 24px;
   margin: 100px auto;
 }
 
 .exp {
-    width: 100%;
-    color:white;
+  width: 100%;
+  color: white;
 }
 
-.bottomCard{
-    text-align: center;
-    color:white;
+.bottomCard {
+  text-align: center;
+  color: white;
 }
- .all h1{
-    text-align: center;
-    color:white;
-    font-size: 40px;
-
- }
- .all ul{
-  color:white;
+.all h1 {
+  text-align: center;
+  color: white;
+  font-size: 40px;
+}
+.all ul {
+  color: white;
   font-size: 20px;
 }
-.all li{
-  color:white;
-  font-size: 20px;
-}
-
-p{
-  color:white;
+.all li {
+  color: white;
   font-size: 20px;
 }
 
-.photos h1{
-  color:white;
+p {
+  color: white;
+  font-size: 35px;
+  gap: 24px;
+}
+
+.photos h1 {
+  color: white;
   font-size: 40px;
   text-align: center;
 }
 
-.photos h1{
-  color:white;
+.photos h1 {
+  color: white;
   font-size: 20px;
 }
 
-.workH{
-  margin-top: 50px;
-  color:white;
-  font-size: 20px;
+.workH {
+  color: white;
+  font-size: 26px;
 }
 
-.workTimeLine{
-  color:white;
+.workTimeLine {
+  color: white;
 }
 
-.toWork{
+.toWork {
   text-align: center;
   align-items: center;
   width: 100%;
-  gap:24px;
-  font-size: 20px;
+  gap: 24px;
+  font-size: 40px;
   margin: 80px auto;
 }
 
-.forButton{
+.forButton {
   display: flex;
   flex-direction: row;
   width: 80%;
@@ -75,3 +74,16 @@ p{
   justify-content: space-between;
 }
 
+.carousel {
+  margin-top: 15px;
+  width: 95%;
+  height: 100px;
+  background-color: rgba(144, 198, 249, 0.36);
+  align-items: center;
+  border-radius: 15px 50px 30px;
+}
+
+.item {
+  color: white;
+  font-size: 25px;
+}
