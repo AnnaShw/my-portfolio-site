@@ -36,3 +36,15 @@
   color: white;
   text-decoration: none;
 }
+
+@media (max-width: 780px) {
+  .btngrad {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 781px) and (max-width: 1024px) {
+  .btngrad {
+    font-size: 18px;
+  }
+}

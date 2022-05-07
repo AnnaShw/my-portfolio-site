@@ -13,19 +13,25 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "transparent",
   },
   navlinks: {
-    marginLeft: theme.spacing(10),
     display: "flex",
+    flex:"1",
+    alignItems: "center",
+    justifyContent: "space-evenly",
+  },
+  title: {
+    display: "flex",
+    flex: "2",
+    alignItems: "center",
+    justifyContent: "flex-start",
+    gap: "12px",
   },
   logo: {
-    flexGrow: "1",
     cursor: "pointer",
-    marginLeft: theme.spacing(2),
   },
   link: {
     textDecoration: "none",
     color: "white",
     fontSize: "20px",
-    marginLeft: theme.spacing(20),
     "&:hover": {
       color: "yellow",
       borderBottom: "1px solid white",
@@ -40,10 +46,12 @@ function MenuBar() {
     <AppBar position="static" className={classes.root}>
       <CssBaseline />
       <Toolbar>
-        <BackgroundLetterAvatars currentStr={"Anna Shveynfurt"} />
-        <Typography variant="h4" className={classes.logo}>
-          Anna Shveynfurt
-        </Typography>
+        <div className={classes.title}>
+          <BackgroundLetterAvatars currentStr={"Anna Shveynfurt"} />
+          <Typography variant="h4" className={classes.logo}>
+            Anna Shveynfurt
+          </Typography>
+        </div>
         <div className={classes.navlinks}>
           <Link to="/" className={classes.link}>
             Home

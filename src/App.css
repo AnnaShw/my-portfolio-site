@@ -6,8 +6,12 @@ body {
     #3584a7 51%,
     #30d2be 100%
   );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 main {
-  min-height: 600px;
+  min-height: 500px;
+  width: 100%;
 }
+

@@ -5,11 +5,12 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import { Button } from "@mui/material";
 
 export default function SocialNetworking() {
-
   return (
     <BottomNavigation sx={{ width: "all" }}>
       <Button>
-        <a href="https://www.linkedin.com/in/anna-shveynfurt/"><LinkedInIcon /></a>
+        <a href="https://www.linkedin.com/in/anna-shveynfurt/">
+          <LinkedInIcon />
+        </a>
       </Button>
       <Button href="https://github.com/AnnaShw?tab=repositories">
         <GitHubIcon />

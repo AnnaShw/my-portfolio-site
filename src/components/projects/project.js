@@ -32,18 +32,19 @@ function Projects() {
   return (
     <Carousel itemsToShow={2}>
       {projects.map((oneProject) => (
-        <div className={classes.divC}>
+        <div className={classes.divC} key={Math.random()}>
           <Typography
             variant="h4"
             component="div"
             sx={{ m: 2.1 }}
+            key={Math.random()}
             className={classes.name}
           >
             {" "}
             {oneProject[0].name}
           </Typography>
-          <Button href={oneProject[0].url}>
-            <Typography className={classes.visit} variant="h6">
+          <Button href={oneProject[0].url} key={Math.random()}>
+            <Typography className={classes.visit} variant="h6" key={Math.random()}>
               <LinkIcon />
               {" Visit game site"}
             </Typography>

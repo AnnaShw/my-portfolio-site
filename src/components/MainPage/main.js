@@ -5,10 +5,10 @@ import classnames from "./main.module.css";
 
 function Main() {
   return (
-    <div>
+    <div className={classnames.thisDiv}>
       <TypingDemo />
       <div className={classnames.toWork}>
-        <div>
+        <div className={classnames.all}>
           <p>
             Here you can find out more about the companies I've collaborated
             with, my projects and the technologies I can work with.
@@ -17,7 +17,7 @@ function Main() {
             Check out my work history
           </MyButton>
         </div>
-        <div>
+        <div className={classnames.pd}>
           <p>I belive that:</p>
           <Quote />
         </div>
